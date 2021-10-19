@@ -53,4 +53,5 @@ class Code:
                     break
                 else:
                     XO_code = XO_code + "*"
+        return XO_code
                 
