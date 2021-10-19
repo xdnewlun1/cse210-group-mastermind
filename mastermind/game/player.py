@@ -16,6 +16,7 @@ class Player:
         """
         self._name = name
         self._move = None
+        self._code = None
         
     def get_move(self):
         """Returns the player's last move (an instance of Move). If the player 
@@ -42,3 +43,24 @@ class Player:
             move (Move): an instance of Move
         """
         self._move = move
+
+    def set_code(self, code):
+        """Sets the player's last result code.
+
+        Args:
+            self (Player): an instance of Player
+            code (String): Players XO* code
+        
+        """
+        self._code = code
+
+    def get_code(self):
+        """Returns the player's last XO* code. If the player hasn't had one generaterd 
+        this method will return None.
+
+        Args:
+            self (Player): an instance of Player
+        
+        """
+        return self._code
+
