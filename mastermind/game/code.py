@@ -51,7 +51,7 @@ class Code:
                 elif exp_guess[guess_digit] == exp_code[code_digit]:
                     XO_code = XO_code + "O"
                     break
-                else:
+                elif code_digit == 3 and exp_guess[guess_digit] != exp_code[code_digit]:
                     XO_code = XO_code + "*"
         return XO_code
                 
