@@ -1,7 +1,8 @@
-import random
+
 class Board:
 
-    """- equals players guess * equals wrong X means correct number 0 correct number 
+    """- equals players guess * equals wrong X means correct number 0 
+    correct number 
     incorrect spot
     --------------------
 Player Matt: ----, ****
