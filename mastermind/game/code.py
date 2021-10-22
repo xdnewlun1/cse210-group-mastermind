@@ -1,6 +1,7 @@
 import random
 class Code:
-    """The secret code to be guessed in the game. The responsibility of Code is to generate the new code and do guess checking against player guesses.
+    """The secret code to be guessed in the game. The responsibility of Code is to 
+        generate the new code and do guess checking against player guesses.
 
     Stereotype:
         Service Provider, Information Holder
