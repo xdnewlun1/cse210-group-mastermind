@@ -35,3 +35,6 @@ root                    (project root folder)
 ## Authors
 ---
 * # TODO: Add your names and emails here
+
+
+Anita Woodford woo18041@byui.edu
