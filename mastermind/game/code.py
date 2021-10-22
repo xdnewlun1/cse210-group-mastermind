@@ -1,3 +1,4 @@
+import random
 class Code:
     """The secret code to be guessed in the game. The responsibility of Code is to generate the new code and do guess checking against player guesses.
 
@@ -28,7 +29,7 @@ class Code:
             guess (int): the players guess from the console
         """
         if(self._code == guess):
-            _game_running = False
+            self._game_running = False
             #Director would need to say a player has won from _game_running becoming false
 
     def gen_player_result(self, guess):
