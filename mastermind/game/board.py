@@ -22,13 +22,12 @@ What is your guess? 4356"""
         self.line = "_" * 20
         self.guess = "_" * 4
         self.hint = "*" * 4
-        self.code = ""
 
     def print_board(self,player,code):
         # secret code shows as ----
 
         players = player.get_name()
-        self.code = code.get_hints()
+        self.code = player.get_code()
         print(self.line)
         print(f"Player {players[0]}: {self.code},{self.guess},{self.hint}")
         print(f"Player {players[1]}: {self.code},{self.guess},{self.hint}")
