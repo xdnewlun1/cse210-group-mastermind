@@ -12,7 +12,7 @@ class Director:
         self.Player = Player() #keep track of their identity and last move
         self._roster = Roster() #keep track of the players
         self.Generate = Board() #generates and updates board
-        self.Code = Code() #generate code and update display code
+        self.Code = Code() # generate code and update display code
         self.winner = ""
         
     def start_game(self):
