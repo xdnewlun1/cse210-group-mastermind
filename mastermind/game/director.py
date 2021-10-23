@@ -31,7 +31,7 @@ class Director:
             self._roster.add_player(player)
 
     def do_outputs(self):
-        self.Board.display_board(self._roster.players,self.Code.get_hints)
+        self.Board.display_board(self._roster.players)
     
     def get_inputs(self):
         self.user_guess = self.Console.read(int("What is your guess? 0000-9999: "))
@@ -44,5 +44,5 @@ class Director:
 
         else: 
             self.Code.gen_player_result(self, self.user_guess) 
-            self.Board.reprint_board()
+            self.Board.reprint_board() 
             self.Roster.next_player
