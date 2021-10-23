@@ -19,16 +19,22 @@ class Board:
     def __init__(self):
         self._items= []
 
-    def display_board(self,roster,code):
+    def display_board(self,roster):
         """Sets up the board with an entry for each player.
         
         Args:
             self (Board): an instance of Board.
+            roster (Roster): get Roster
         """
-        name = roster.get_current()
-        guess = "----"
-        hint = "****"
-        self._items[name] = [code, guess, hint]
+        player = roster.get_current()
+        hint = player.get_code()
+        if hint == None:
+            hint = "****"
+        guess = player.get_move()
+        if guess == None:
+            guess = "----"
+        roster.next_player()
+        self._items[name] = [guess, hint]
 
     def update(self,hint, guess):
         pass
@@ -42,24 +48,4 @@ class Board:
     def prepare(self, player):
         pass
 
-    def _create_hint(self, code, guess):
-        """Generates a hint based on the given code and guess.
-
-        Args:
-            self (Board): An instance of Board.
-            code (string): The code to compare with.
-            guess (string): The guess that was made.
-
-        Returns:
-            string: A hint in the form [xxxx]
-        """ 
-        hint = ""
-        for index, letter in enumerate(guess):
-            if code[index] == letter:
-                hint += "x"
-            elif letter in code:
-                hint += "o"
-            else:
-                hint += "*"
-        return hint
 
