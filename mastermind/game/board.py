@@ -34,7 +34,6 @@ class Board:
             guess = "----"
         roster.next_player()
         self._items[name] = [guess, hint]
-
     def update(self,hint, guess):
         pass
     
