@@ -17,7 +17,7 @@ class Code:
         Args:
             self (Code): an instance of Code
         """
-        self._code = format(random.randint(1000,9999), '04d')
+        self._code = int(format(random.randint(1000,9999), '04d'))
         self._game_running = True
     
     def check_player_guess(self, guess):
@@ -29,7 +29,7 @@ class Code:
             self (Code): an instance of Code
             guess (int): the players guess from the console
         """
-        if(self._code == guess):
+        if(self._code == int(guess)):
             self._game_running = False
             #Director would need to say a player has won from _game_running becoming false
 
