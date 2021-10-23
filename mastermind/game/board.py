@@ -8,7 +8,6 @@ class Board:
     --------------------
     Matt's turn:
     What is your guess? 1111
-
     --------------------
     Player Matt: 1111, xooo
     Player John: ----, ****
@@ -47,5 +46,3 @@ class Board:
 
     def prepare(self, player):
         pass
-
-

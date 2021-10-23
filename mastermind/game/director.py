@@ -12,7 +12,7 @@ class Director:
         self.Player = Player() #keep track of their identity and last move
         self._roster = Roster() #keep track of the players
         self.Generate = Board() #generates and updates board
-        self.Code = Code() #generate code and update display code
+        self.Code = Code() # generate code and update display code
         self.winner = ""
         
     def start_game(self):
@@ -31,7 +31,7 @@ class Director:
             self._roster.add_player(player)
 
     def do_outputs(self):
-        self.Board.display_board(self._roster.players)
+        self.Board.display_board(self._roster.players,self.Code.get_hints)
     
     def get_inputs(self):
         self.user_guess = self.Console.read(int("What is your guess? 0000-9999: "))
